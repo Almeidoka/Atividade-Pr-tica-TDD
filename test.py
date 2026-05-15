@@ -12,3 +12,6 @@ def test_numero():
 def test_minimo_caracteres():
     assert validacao_senha("123a") is False
 
+def test_caractere_especial():
+    assert validacao_senha("123122aA") is False
+    
