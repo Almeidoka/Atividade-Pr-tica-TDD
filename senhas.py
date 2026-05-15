@@ -2,13 +2,13 @@ import re
 
 def validacao_senha(senha: str) -> bool:
     
-    regras =[
+    padrao = (
+        r'^(?=.*[A-Z])'
+        r'(?=.*[a-z])'
+        r'(?=.*\d)'
+        r'(?=.*[!@#$%^&*()_+={}\[\]|\\:;,.<>?/])'
+        r'(?!.*\s)'
+        r'.{8,}$'
+    )
 
-        len(senha)< 8,
-        " " not in senha,
-        re.search(r'[A-Z]', senha),
-        re.search(r'[a-z]', senha),
-        re.search(r'[0-9]', senha),
-        re.search(r'[!@#$%^&*()_+={}\[\]|\\:;,.<>?/]', senha)
-    ]
-    return all(regras)
+    return re.match(padrao, senha) is not None
