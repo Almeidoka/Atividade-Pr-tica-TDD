@@ -17,4 +17,6 @@ def test_caractere_especial():
 
 def test_espacos():
     assert validacao_senha("123 123!aA") is False
-    
+
+def test_senha_aceita():
+    assert validacao_senha("123456Gu!") is True
