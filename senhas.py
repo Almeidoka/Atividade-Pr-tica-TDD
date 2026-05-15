@@ -1,6 +1,6 @@
 import re
 
-def validar_senha(senha: str) -> bool:
+def validacao_senha(senha: str) -> bool:
     
     regras =[
 
