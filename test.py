@@ -14,4 +14,7 @@ def test_minimo_caracteres():
 
 def test_caractere_especial():
     assert validacao_senha("123122aA") is False
+
+def test_espacos():
+    assert validacao_senha("123 123!aA") is False
     
