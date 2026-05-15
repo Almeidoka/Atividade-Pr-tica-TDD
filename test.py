@@ -5,3 +5,6 @@ def test_letra_maiuscula():
 
 def test_numero():
     assert validacao_senha("asdadaA!a") is False
+
+def test_minimo_caracteres():
+    assert validacao_senha("123a") is False
